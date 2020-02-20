@@ -1,0 +1,61 @@
+1. What is Spring boot ?
+- Spring module
+- Provides RAD (Rapid application development) features to sping framework
+- Used to create standalone spring based application 
+
+2. Advantages of Spring boot ?
+- Stand-alone app
+- Embedded tomcat
+- Opiniated starter POMs 
+	- Set of convinient dependencies 
+	- Just JARs
+	- Used to auto resolve dependencies 
+	- Transitively Dependency Resolution Management. A -> B,B -> C, A -> C
+	- Example - spring-boot-starter-data-jpa, Includes ?
+- Auto configurations 
+- Spring initizr 
+
+
+3. How to create Spring boot app ?
+- Spring maven project
+- Spring initializr 
+- Spring boot CLI
+- Spring boot wizard, Spring STS | Intellij Ultimate
+
+4. Spring boot annotations ?
+- @RestController
+	- It adds @Controller & @ResponseBody to class
+	- @Controller
+	- @ResponseBody
+
+5. Spring boot dependency management ?
+- Manages dependency and configurations automatically 
+- Don't need to mention version, ?
+- Spring boot upgrades all dependencies automatically when you upgrade spring boot
+
+6. Spring boot properties
+- either in .properties OR in .yml
+- Generally used in externalised configuration
+
+7. Spring boot actuator ?
+- To monitor app
+- Provides managed HTTP endpoints 
+- Example ?
+
+8. Thymeleaf ?
+- server side java template engine 
+- Alternatives ?
+- Can be integrated with spring and html5
+- spring-boot-starter-thymeleaf
+
+9.Spring vs Spring boot
+- Spring 
+	- web app framework based on java 
+	- Unopiniated view
+	- Provides frameworks 
+- Spring boot 
+	- Spring Boot is a spring module which is used to create spring application project that can just run
+	- Opiniated view
+	- 
+
+
