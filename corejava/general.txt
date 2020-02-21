@@ -1,0 +1,62 @@
+1. What is java?
+- OOPL
+- PI / Portable 
+- Multi threaded (?)
+- Secure (?)
+
+2. What is OOPS ?
+- Language in which objects are first class citizens 
+- Uses real world analogy like- inheritance, polymorphism, abstraction etc
+- Manipulating these objects to get results is the goal of Object Oriented Programming.
+
+3. OOP Conecpts ?
+- Inheritance
+	- Inheriting the properties of parants 
+- Abstacrtion 
+	- Abstraction hide details
+	- It seperats implementation from class 
+	- Real world example - How car engine works is hidden from driver, Need not know.
+	- interface Car with getEngine method, VW | Maruti implements Car 
+- Encapsulation 
+	- Data hiding
+	- principle of wrapping data (variables) and code together as a single unit.
+	- It keeps data safe. 
+	- Example - private salary, Exposing its value using getter
+- Polymorphism 
+	- polymorphism means many forms.
+	- Real world example - A person can be child, husbund, father
+	- Java 
+		- Compile time polymorphism
+			- Static polymorphism 	
+			- Method overloading 
+		- Run time polymorphism 
+			- Dynamic 
+			- a function call to the overridden method is resolved at Runtime. 
+			Parent a; 
+  
+        		a = new subclass1(); 
+        		a.Print(); 
+  
+        		a = new subclass2(); 
+       			 a.Print(); 
+
+4. Abstraction vs. Encapsulation ? 
+- Encapsulation 
+	- is more about "How" to achieve a functionality
+	- Solves problem at implemenation level
+- Abstraction 
+	- is more about "What" a class can do.
+	- Solves problem at design level
+
+5. Composition ?
+
+6. Association ?
+- Association is relation between two separate classes which establishes through their Objects. - - Association can be one-to-one, one-to-many, many-to-one, many-to-many.
+- Composition and Aggregation are the two forms of association.
+- Bank - getBankName(), Employee - getEmployeeName(), Association System.out.println(emp.getEmployeeName() +  
+               " is employee of " + bank.getBankName()); 
+
+. Is java 100% object oriented ?
+- No, As it contains premitive types such as int, float, double. 
+
+

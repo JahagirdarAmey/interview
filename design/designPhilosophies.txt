@@ -1,0 +1,4 @@
+12-factor app
+YAGNI
+
+
