@@ -1,0 +1,48 @@
+1. Cloud foundry ?
+- open source cloud computing platform 
+- It is a platform (PaaS) 
+
+2. Why PaaS ?
+- it helps developer to just focus on code rather worrying about platform they use and their configurations
+
+3. Advantages of Pivotal Cloud Foundry(PCF)?
+- Fast application development and deployment.
+- Highly scalable and available architecture.
+- DevOps-friendly workflows. (PaaS)
+
+4. What is Cloud Foundry BuildPack?
+- Buildpacks provide framework and runtime support for apps
+
+5. What is CLI? How to use it?
+- CF CLI
+- cf login, cf push, ?
+
+6. What are various Roles and associated permissions in PCF?
+- Org Managers
+- Org Users
+
+7. CF Manifest
+- name, jarpath , memory, instance, buildpack 
+
+8. Staging
+
+9. Droplet 
+
+10 Routing 
+
+11. Service 
+
+12. What is Cloud Foundry container? 
+
+13. What is Organization, Spaces, and Domains?
+
+14. restart and restage
+
+15. UAA
+
+16. What is BOSH in Cloud Foundry?
+
+17. Load balancing 
+
+18. Auto scaling 
+
