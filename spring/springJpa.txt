@@ -1,0 +1,4 @@
+1. Conntect Spring boot app to database. 
+2. What is H2
+3. JdbcTemplate
+4. Spring data jpa vs jpa vs hibernate

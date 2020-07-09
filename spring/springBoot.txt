@@ -4,17 +4,19 @@
 - Used to create standalone spring based application 
 
 2. Advantages of Spring boot ?
-- Stand-alone app
+- Stand-alone app 
+- Auto dependency dependencies  
 - Embedded tomcat
 - Opiniated starter POMs 
 	- Set of convinient dependencies 
 	- Just JARs
 	- Used to auto resolve dependencies 
 	- Transitively Dependency Resolution Management. A -> B,B -> C, A -> C
-	- Example - spring-boot-starter-data-jpa, Includes ?
+	- Example - spring-boot-starter-web. Which includes Spring mvc, REST, tomcat, Jakson, 
 - Auto configurations 
 - Spring initizr 
-
+- Integrates with Spring Ecosystem like Spring JDBC, Spring ORM, Spring Data, Spring Security easily by avoiding boilerplate code.
+- Spring CLI
 
 3. How to create Spring boot app ?
 - Spring maven project
@@ -40,7 +42,7 @@
 7. Spring boot actuator ?
 - To monitor app
 - Provides managed HTTP endpoints 
-- Example ?
+- Example ? - env, health,mappings, httptrace?
 
 8. Thymeleaf ?
 - server side java template engine 
@@ -56,6 +58,108 @@
 - Spring boot 
 	- Spring Boot is a spring module which is used to create spring application project that can just run
 	- Opiniated view
-	- 
 
+10. WAR vs JAR
+
+11. Tomcat vs Jetty
+
+12. Spring CLI usage ?
+
+13. How to do logging in Spring boot ?
+
+14. log4j vs slf4j ?
+
+15. Mention the possible sources of external configuration
+- application properties
+- command line properties (Example ?)
+- env variables 
+
+16. Explain externalised properties in spring boot 
+
+17. Spring boot dev tools ?
+- set of tools and aims to make the process of developing an application easier
+- Restart an app on save - LiveReload
+
+18. what is HTTP/2. How to enable it in spring boot ?
+- server.http2.enabled=true
+
+19. auto-configuration in Spring Boot and how to disable the  auto-configuration?
+- Automatically configure the required configuration for the application
+- Example ?
+- Default it includes ? 
+- To exclude - @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+
+20. @SpringBootApplication explain
+- @Configuration
+- @ComponentScan 
+- @EnableAutoConfiguration 
+
+21. What is @Configuration
+
+22. What is @componantScan 
+
+23. What is @EnableAutoConfiguration
+- 
+
+24. What is bean ? 
+
+25. What are the steps to deploy Spring Boot web applications as JAR and WAR files?
+- Add the plugin - <artifactId>spring-boot-maven-plugin</artifactId>
+- <packaging>jar</packaging>
+
+26. @Value 
+
+27. @ConfigurationProperties
+
+28. yaml files in spring boot. & SnakeYaml 
+- The SpringApplication class supports the YAML file as an alternative to properties whenever you use the SnakeYAML library on your classpath. The different ways to load a YAML file in Spring Boot is as follows:
+
+    Use YamlMapFactoryBean to load YAML as a Map
+    Use YamlPropertiesFactoryBean to load YAML as Properties
+
+29. Explain how to register a custom auto-configuration.
+
+30. Web flies in spring boot ?
+
+31. What do you understand by Spring Boot supports relaxed binding?
+
+32.  Do you think, you can use jetty instead of tomcat in spring-boot-starter-web? How ?
+
+33. Spring boot starters example 
+
+    spring-boot-starter: core starter, including auto-configuration support, logging, and YAML
+    spring-boot-starter-aop: starter for aspect-oriented programming with Spring AOP and AspectJ
+    spring-boot-starter-data-jpa: starter for using Spring Data JPA with Hibernate
+    spring-boot-starter-jdbc: starter for using JDBC with the HikariCP connection pool
+    spring-boot-starter-security: starter for using Spring Security
+    spring-boot-starter-test: starter for testing Spring Boot applications
+    spring-boot-starter-web: starter for building web, including RESTful, applications using Spring MVC
+
+
+34. How Can We Set up a Spring Boot Application With Maven?
+
+35. How to Tell an Auto-Configuration to Back Away When a Bean Exists?
+
+36. @ConditionalOnMissingBean 
+
+37. Explain RAD model
+
+38. What are the commands to run and stop Spring Boot executable jar file?
+- java -jar myproject-0.0.1-SNAPSHOT.jar & ctrl c
+
+39.  run Spring Boot application on the custom port?
+- server.port=8050
+
+40. Boot admin
+
+41.  What are embedded containers support by Spring & their usage
+- Tomcat
+- Jetty
+- Undertow 
+
+42. What do you mean by hot-swapping in Spring Boot?
+- It is a way to reload the changes without restarting Tomcat, or Jetty server.
+- Needs IDE support 
+
+43. Set profile in spring boot
 

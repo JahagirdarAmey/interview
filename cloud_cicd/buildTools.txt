@@ -1,0 +1,2 @@
+1. Do you need to have mvn / gradle installed on your system to run Spring boot app ?
+2. Maven / Gradle version
