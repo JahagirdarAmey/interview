@@ -1,0 +1,21 @@
+1. What is the purpose of garbage collection in Java, and when is it used?
+- Identify and discard those objects that are no longer needed by the application
+- In order for the resources to be reclaimed and reused.
+
+2. System.gc() and Runtime.gc() 
+- Can be used as a hint to the JVM.
+- This it is up to the Java Virtual Machine (JVM) to start the garbage collection immediately or later in time.
+- System.gc() ?
+- Runtime.gc() ?
+
+3. When is the finalize() called? What is the purpose of finalization?
+- The finalize method is called by the garbage collector, just before releasing the object’s memory. 
+- It is normally advised to release resources held by the object inside the finalize method.
+
+4. If an object reference is set to null, will the Garbage Collector immediately free the memory held by that object ?
+- No, the object will be available for garbage collection in the next cycle of the garbage collector.
+
+5. Structure of java heap ?
+
+
+

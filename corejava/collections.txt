@@ -1,0 +1,97 @@
+1. basic interfaces of Java Collections Framework?
+- Iterable -> Collenction -> List, Queue, Set 
+
+2. Why Collection does not extend Cloneable and Serializable interfaces?
+- The semantics and the implications of either cloning or serialization come into play when dealing with actual implementations. Thus, the concrete implementations of collections should decide how they can be cloned or serialized.
+
+3. What is an Iterator?
+- The Iterator interface provides a number of methods that are able to iterate over any Collection. 
+- Each Java Collection contains the iterator method that returns an Iterator instance. 
+- Iterators are capable of removing elements from the underlying collection during the iteration.
+
+4. Iterator vs ListIterator?
+- Iterator 
+	- An Iterator can be used to traverse the Set and List collections
+	- Travese only in forward direction
+- List iterator 
+	- ListIterator can be used to iterate only over Lists.
+	- Traverse in both direction 
+	- listIterator extents Iterator 
+	- Added - such as adding an element, replacing an element, getting the index position for previous and next elements, etc.
+
+5. fail-fast vs fail-safe ?
+fail-safe 
+	- The Iterator’s fail-safe property works with the clone of the underlying collection and thus, it is not affected by any modification in the collection.
+	- collection classes in java.util.concurrent are fail-safe
+	- never throws ConcurrantModificaionException 
+
+Fail-fast
+	- Fail-fast iterators throw a ConcurrentModificationException
+	- . All the collection classes in java.util package are fail-fast
+
+6. How hash-map works ?
+
+7. Importance of hashCode and equals method ?
+
+8. HashMap vs HashTable 
+Similarities 
+	- HashMaps and Hashtable implements Map interface
+Differences 
+	- HashMap allows existance of null keys and values, HashTable does not allow 
+	- A Hashtable is synchronized, while a HashMap is not. Thus, HashMap is preferred in single-threaded environments, while a Hashtable is suitable for multi-threaded environments.
+	- HashMaps -> fail-fast. Hashtable provides an Enumeration of its keys. (Iterator fail-fast or fail-safe ?)
+
+9. Array vs ArrayList 
+Array 
+	- Only premitive
+	- Fixed 
+ArrayList 
+	- Only objects 
+	- Dynamic
+	- Provide methods 
+
+10. ArrayList vs LinkedList
+ArrayList
+	- implements list
+	- Index based DS (?)
+	- Provides random access with performance O(1)
+	- Insertion, addition and removal is slow because arrays and index based, so need to update index and resize
+LinkedList
+	- Stores its data as list of elements and every element is linked to its previous and next element. 
+	- the search operation for an element has execution time equal to O(n).
+	- implements list	
+	- The Insertion, addition and removal operations of an element are faster in a LinkedList
+	- A LinkedList consumes more memory than an ArrayList, because every node in a LinkedList stores two references, one for its previous element and one for its next element.
+
+
+11. Comparable vs Comparator 
+Comparable -
+	- compareTo()
+	- compares two objects, inorder to implose an order between them 
+	- Specifically, it returns a negative integer, zero, or a positive integer to indicate that the input object is less than, equal or greater than the existing object.
+Comparator -
+	- compare() & equals()
+	- The first method compares its two input arguments and imposes an order between them. 
+	- It returns a negative integer, zero, or a positive integer to indicate that the first argument is less than, equal to, or greater than the second. 
+	- The second method requires an object as a parameter and aims to decide whether the input object is equal to the comparator. The method returns true, only if the specified object is also a comparator and it imposes the same ordering as the comparator.
+
+12. Java Priority Queue ?
+- The PriorityQueue is an unbounded queue, based on a priority heap and its elements are ordered in their natural order. 
+- At the time of its creation, we can provide a Comparator that is responsible for ordering the elements of the PriorityQueue.
+- A PriorityQueue does not allow null values, those objects that do not provide natural ordering or those objects that do not have any comparator associated with them
+- Finally, the Java PriorityQueue is not thread-safe and it requires O(log(n)) time for its enqueuing and dequeuing operations.
+- When to use ?
+
+13. Trade-off between using an unordered array versus an ordered array?
+- The major advantage of an ordered array is that the search times have time complexity of O(log n), compared to that of an unordered array, which is O (n).
+- The disadvantage of an ordered array is that the insertion operation has a time complexity of O(n), because the elements with higher values must be moved to make room for the new element. Instead, the insertion operation for an unordered array takes constant time of O(1).
+
+14. Enumeration vs Iterator interfaces?
+- Enumeration is twice as fast as compared to an Iterator and uses very less memory. 
+- Iterator is much safer compared to Enumeration, because other threads are not able to modify the collection object that is currently traversed by the iterator. Also, Iterators allow the caller to remove elements from the underlying collection, something which is not possible with Enumerations.
+
+15. HashSet vs TreeSet 
+- The HashSet is Implemented using a hash table and thus, its elements are not ordered. The add, remove, and contains methods of a HashSet have constant time complexity O(1). 
+- TreeSet is implemented using a tree structure. The elements in a TreeSet are sorted, and thus, the add, remove, and contains methods have time complexity of O(logn).
+
+

@@ -51,6 +51,9 @@
 9. What is Autoboxing and Unboxing?
 - Autoboxing is the automatic conversion made by the Java compiler between the primitive types and their corresponding object wrapper classes. - int to an Integer, a double to a Double, and so on. 
 - If the conversion goes the other way, this operation is called unboxing.
+- Wrapper classes 
+	- java primitives into objects
+	
 
 10. What is Function Overriding and Overloading in Java?
 - Overloading - two or more methods in the same class have the exact same name, but different parameters. 
@@ -120,32 +123,57 @@
 	public class ComputingEngine 
 	{ 
 	    public static void main(String[] args) 
-    	{ 
+    	    { 
          
-        ComputingEngine engine = new ComputingEngine();
+        	ComputingEngine engine = new ComputingEngine();
          
-        
-        Computation computation = new Computation(65);
-        engine.changeComputedValue(computation);
+		
+		Computation computation = new Computation(65);
+        	engine.changeComputedValue(computation);
          
-        System.out.println("The value of x after passing by reference "+ computation.x);
-         
-    } 
+        	System.out.println("The value of x after passing by reference "+ computation.x);
+	    } 
      
-   
-     
-    public void changeComputedValue(Computation computation)
-    {
-        computation = new Computation();
-        computation.x = 40;
-    }
-}
- 
- 
-class Computation 
-{ 
-    int x; 
-    Computation(int i) { x = i; } 
-    Computation()      { x = 1; } 
-}
+   	 public void changeComputedValue(Computation computation)
+    	   {
+        	computation = new Computation();
+        	computation.x = 40;
+    	   }
+	}
+  
+	class Computation 
+	{ 
+    		int x; 
+    		Computation(int i) { x = i; } 
+		Computation()      { x = 1; } 
+	}
+
+
+16. Local variables vs instance variables 
+- Local variabls 
+	- inside method or constructor or block
+	- Need to be initialised, Oterwise code will not compile.
+- Instance varaibes
+	- Inside class or class level
+	- If not initialised, default value is used
+
+17. Access modifiers 
+- Public - accesible from everywhere in app
+- Protected - accessible within the package and the subclasses in any package
+- Package Private (Default) – accessible strictly within the package
+- Private – accessible only within the same class where it is declared
+
+18. Difference between static binding and dynamic binding
+- Static binding 
+	- Binding at compile time 
+	- Shape s = new Shape();
+- Dynamic binding 
+	- Binding at run time
+	- Shape s = new Rectangle();
+
+19. What’s the difference between String, StringBuffer andStringBuilder?
+
+20. Clonable
+
+
 

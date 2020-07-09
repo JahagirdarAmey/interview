@@ -1,0 +1,71 @@
+1. Processes vs Threads?
+- Process 
+	- A program in execution 
+	- A process can contain multiple threads
+	- A process communicates - IPC
+	- Processes get executed in separate memory spaces.
+	- OS controlls process
+- Threads
+	- Thread is a single execution sequence within a process. 
+	- A Thread is sometimes called a lightweight process
+	- Threads of a process can communicate with each other.
+	- Threads are executed in shared memory spaces.
+	- Software controlls threads 
+
+2. Ways of creating a thread
+- A class may extend the Thread class.
+- A class may implement the Runnable interface.
+- An application can use the Executor framework, in order to create a thread pool. 
+- Preferd way 
+	- The Runnable interface is preferred, as it does not require an object to inherit the Thread class. (How ?)
+	- In case your application design requires multiple inheritance, only interfaces can help you.
+
+3. What are locks
+
+4. Monitor ?
+- Watches over a sequence of synchronized code and ensuring that only one thread at a time executes a synchronized piece of code
+- The thread is not allowed to execute the code until it obtains the lock.
+
+4. Thread states
+- NEW: The thread becomes ready to run, but does not necessarily start running immediately.
+- RUNNABLE: The Java Virtual Machine (JVM) is actively executing the thread’s code.
+- BLOCKED: The thread is in a blocked state while waiting for a monitor lock.(?)
+- WAITING: The thread waits for another thread to perform a particular action.
+- TERMINATED: The thread has finished its execution. (What happens to thread then?)
+
+5. What is the difference between a method and block that are synchronized?
+- In Java programming, each object has a lock. A thread can acquire the lock for an object by using the synchronized keyword. 
+- The synchronized keyword can be applied in a method level (coarse-grained lock) or block level of code (fine-grained lock).
+
+6. Volatile Variable?
+- Volatile variable values can be modified by different threads.
+- They will never have the chance to block and hold a lock. Block ? lock ?
+- Synchronization will happen whenever the variables are accessed.
+- Using volatile may be faster than a lock, but it will not work in some situations.What situations ?
+- public volatile int count = 0;
+
+7. Transient variable?
+- A transient variable would not be serialized even if the class to which it belongs is serialized.
+- Use ?
+
+8. What is deadlock ?
+- A condition that occurs when two processes are waiting for each other to complete, before proceeding. 
+- The result is that both processes wait endlessly.
+
+9. How do you ensure that N threads can access N resources without deadlock?
+- A very simplae way to avoid deadlock while using N threads is to impose an ordering on the locks and force each thread to follow that ordering 
+- Thus, if all threads lock and unlock the mutexes in the same order, no deadlocks can arise.
+
+10. Mutexes 
+
+11. Explan notify(), notifyAll(), interrupt()
+
+11.  What are the differences between wait and sleep method in Java?
+Wait 
+	- Wake up condition - until call notify(), notifyAll() from object
+	- Used for time-synchronization
+	- release the lock for other objects to have the chance to execute
+Sleep 
+	- Wake up condition - until at least time expire or call interrupt().
+	- Used for multi-thread-synchronization
+	- keep lock for at least t times if timeout specified or somebody interrupt.

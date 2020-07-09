@@ -1,0 +1,12 @@
+1. Singleton 
+- What ?
+	- ensure that only one instance of the singleton class ever exists
+	- provide global access to that instance
+- Why ?
+- Usage ?
+- How to create ?
+	- declare all constructors of the class as private
+	- provide a static method that returns a reference to the instance
+- When not to use ? 
+- Example in java ?
+

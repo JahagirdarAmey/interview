@@ -1,0 +1,157 @@
+1. GCP offers 4 types of main service 
+	Compute, -> Compute engine , k8s engine, App engine, cloud functions 
+	Storage, -> Bigtable, cloud storage, cloud sql, cloud spanner, cloud datastore
+	Big data, -> Big query, pub/sub, data flow, data proc, data lab
+	ML -> Natural language API, Vision API, ML, Speech API, Translate API
+
+2. Cloud computing 
+	- On-demand self service for resources with no human interaction
+	- Acess from anywhere
+	- Elasticity 
+	- Pay only for what you use
+	- Geographical
+
+3. Before cloud computing
+	- Private Data centers, Then shared physical Co locations, Then Virtualisation, Now fully managed services 
+
+4. GCP computing architecture 
+	- IaaS -> Compute Engine
+	- Hybrid -> k8s engine
+	- PaaS -> App Engine 
+	- Cloud Functions -> Serverless
+	- Many manages services (?)
+	- SaaS -> Drive, Maps 
+
+5. Regions and zones
+	- Zone - europe-west2-a/b/c
+	- Region - europe-west2
+	- Multi-regions 
+
+6. Billing
+	- Per seconds 
+
+7. GCP Services are compatible with open source products 
+	- Bigtable - Apache HBase 
+	- Cloud Dataproc - Hadoop
+	- K8s, Tensorflow, 
+
+8. Security 
+- encryption at rest, encryption at transit  
+
+
+Module 2
+
+9. Principle of leas priviladge 
+- Each user should have only those priviladges to do their job
+
+10 Ways to interact with GCP
+- Web portal - cloud shell
+- SDK 
+- CMD
+- APIs
+- Mobile app
+
+11. Security in GCP 
+- You are fully responsible for security but google managed services takes care of many lower layers of security such as , Encryption at rest, network, logs, Hardware
+- Google provides IAM for other security 
+
+12. GCP Resources hierarchy 
+- Rsources -> Projects -> Folders -> Folders (Optional) -> Organisation 
+- Policies can be applied to all
+- Indival resource policies -> buckets 
+- Policies inherited downwords . Policies are transitive . Policies can be ovveriden at child level. 
+- Projects enables cosumers to use API, billing is per project, 
+- Resources belong to exactly 1 project
+- Project ID(Globally Unique, Assigned by you, Immutable), Project Name(For our conviniece , mutable), Project Number (Globally Unique, Assigned by Google, Immutable)
+- Org -> If comapy has GSuite -> Automatically gets org node OR use Google Cloud Identity to create one
+
+
+13. IAM
+- Who - User/ Users / Service account / g suite 
+- a can do what 
+	-  IAM Role - permission/s 
+		- Types
+			- Premitive 
+				- Broad. Apply on projects , takes effect on project
+				- Owner(Editor + manages projects), Editor(Viewer + Can change state), Viewer (Can not change state) , Billing admin
+			- Predefined
+				- Own sets of predefined roles, compute engine offers predefined roles- instanseAdmin role
+			- custome roles
+				- More fine grained. 
+				- Cant be used at folder level, (Only project or org level) 	
+- which resource
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
