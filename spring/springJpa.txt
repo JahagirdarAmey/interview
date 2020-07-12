@@ -2,3 +2,5 @@
 2. What is H2
 3. JdbcTemplate
 4. Spring data jpa vs jpa vs hibernate
+5. Pagination andsorting
+6. Various implementations of JPA

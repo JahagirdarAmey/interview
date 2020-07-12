@@ -1,18 +1,18 @@
 1. What is Spring boot ?
-- Spring module
+- Spring module OR  another Java framework from Sring umbrella. 
 - Provides RAD (Rapid application development) features to sping framework
 - Used to create standalone spring based application 
 
 2. Advantages of Spring boot ?
 - Stand-alone app 
-- Auto dependency dependencies  
+- Auto configuration
 - Embedded tomcat
 - Opiniated starter POMs 
 	- Set of convinient dependencies 
 	- Just JARs
 	- Used to auto resolve dependencies 
 	- Transitively Dependency Resolution Management. A -> B,B -> C, A -> C
-	- Example - spring-boot-starter-web. Which includes Spring mvc, REST, tomcat, Jakson, 
+	- Example - spring-boot-starter-web. Which includes Spring mvc, REST, tomcat, Jakson, Validation - Hibernate Validator, Validation API, loggers etc on classpath
 - Auto configurations 
 - Spring initizr 
 - Integrates with Spring Ecosystem like Spring JDBC, Spring ORM, Spring Data, Spring Security easily by avoiding boilerplate code.
@@ -60,12 +60,14 @@
 	- Opiniated view
 
 10. WAR vs JAR
+- The main difference between an embedded container and a WAR file is that you can Spring Boot application as a JAR from the command prompt without setting up a web server. But to run a WAR file, you need to first set up a web server like Tomcat which has Servlet container and then you need to deploy WAR there.
+
 
 11. Tomcat vs Jetty
 
 12. Spring CLI usage ?
 
-13. How to do logging in Spring boot ?
+13. How to do logging in Spring boot ? with how to configure logging level 
 
 14. log4j vs slf4j ?
 
@@ -98,7 +100,7 @@
 
 22. What is @componantScan 
 
-23. What is @EnableAutoConfiguration
+23. What is @EnableAutoConfiguration & spring.autoconfigure.exclude property
 - 
 
 24. What is bean ? 
@@ -120,6 +122,7 @@
 29. Explain how to register a custom auto-configuration.
 
 30. Web flies in spring boot ?
+-static under resources folder
 
 31. What do you understand by Spring Boot supports relaxed binding?
 
@@ -162,4 +165,70 @@
 - Needs IDE support 
 
 43. Set profile in spring boot
+
+44. What is “Transitively Dependency Resolution Management”?
+- “A” is dependent on “B” and “B” is dependent on “C”, That means “A” is also dependent on “C”
+
+45. How to exclude any package without using the basePackages filter?
+- @SpringBootApplication(exclude= {Employee.class})
+
+46. How to enable HTTPS/SSL support in Spring boot?
+server.port=8443
+server.ssl.key-alias=selfsigned_localhost_sslserver
+server.ssl.key-password=changeit
+server.ssl.key-store=classpath:ssl-server.jks
+server.ssl.key-store-provider=SUN
+server.ssl.key-store-type=JKS
+
+47. Java config vs xml config with example 
+
+48. auto configuration without spring boot
+
+49. minimum baseline Java Version for Spring Boot 2 and Spring 5?
+
+50. Whats new in Spring boot 2
+
+51. Why do we need spring-boot-maven-plugin?
+spring-boot-maven-plugin provides a few commands which enable you to package the code as a jar or run the application
+
+    spring-boot:run runs your Spring Boot application.
+    spring-boot:repackage repackages your jar/war to be executable.
+    spring-boot:start and spring-boot:stop to manage the lifecycle of your Spring Boot application (i.e. for integration tests).
+    spring-boot:build-info generates build information that can be used by the Actuator.
+
+52. Why embedded servers ?
+
+Think about what you would need to be able to deploy your application (typically) on a virtual machine.
+
+    Step 1 : Install Java
+    Step 2 : Install the Web/Application Server (Tomcat/Websphere/Weblogic etc)
+    Step 3 : Deploy the application war
+
+How about making the server a part of the application?
+- You would just need a virtual machine with Java installed and you would be able to directly deploy the application on the virtual machine.
+
+53. HAL broswer ?
+
+54. How to generate a WAR file with Spring Boot?
+
+Recommended Reading
+    https://spring.io/guides/gs/convert-jar-to-war/
+
+Here’s the direct link to spring documentation
+    https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#build-tool-plugins-maven-packaging
+
+55. How to deploy to a different server with with Spring Boot?
+
+    Generate a war from the project.
+    Deploy it to your favourite server (Websphere or Weblogic or Tomcat or …).
+
+
+56. What is Spring data rest & Why do we recommend not to use Spring Data Rest in real world applications?
+
+57. In which layer, should the boundary of a transaction start?
+
+We recommend managing transactions in the Service layer. Logic for business transactions is in the business/service layer and you would want to enforce transaction management at that level.
+
+
+
 
