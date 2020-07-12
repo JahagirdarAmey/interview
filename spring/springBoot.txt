@@ -3,7 +3,129 @@
 - Provides RAD (Rapid application development) features to sping framework
 - Used to create standalone spring based application 
 
-2. Advantages of Spring boot ?
+2. What is RAD ? 
+When I refere to RAD. I refer to leveraging existing services, frameworks, components, patterns, avoiding boilerplate for application development.  
+
+3. How to create Spring boot app ?
+- Spring maven project
+- Spring initializr 
+- Spring boot CLI
+- Spring boot wizard, Spring STS | Intellij Ultimate
+
+4. What is Spring bean? 
+- Spring beans are Java objects that are managed by the Spring container.
+
+5. What is Spring container? 
+- The Spring container is responsible for instantiating, configuring, and assembling the Spring beans.
+
+6. What is IoC container ?
+
+7. Example of Spring bean?
+
+@Setter
+@Getter
+public class HelloWorld { 
+   private String message;   
+ }  
+
+In the XML-based configuration, beans.xml supplies the metadata for the Spring container to manage the bean.
+
+Here is an example of how we configure our HelloWorld POJO for the IoC container:
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   <bean id = "helloWorld" class = "com.zoltanraffai.HelloWorld">
+      <property name = "message" value = "Hello World!"/>
+   </bean>
+</beans>
+
+
+8. What is BeanFactory 
+- root interface for accessing the Spring container.
+- Features 
+	- Bean instantiation/wiring
+	- Usually, the implementations use lazy loading, which means that beans are only instantiating when we directly calling them through the getBean() method.
+	- The most used API that implements the BeanFactory is the XmlBeanFactory.
+	- Example 
+		      XmlBeanFactory factory = new XmlBeanFactory (new ClassPathResource("beans.xml")); 
+			  HelloWorld obj = (HelloWorld) factory.getBean("helloWorld");    
+			  obj.getMessage();    
+
+
+9. What is application context ?
+- The Application Context is Spring's advanced container.
+- used for providing configuration information to the application.
+- It implements the BeanFactory interface. Hence, the ApplicationContext includes all functionality of the BeanFactory and much more
+- Features -  Bean instantiation/wiring, Automatic BeanPostProcessor registration, Automatic BeanFactoryPostProcessor registration, Convenient MessageSource access (for i18n)
+- It uses eager loading, so every bean instantiate after the ApplicationContext is started up.
+- Example 
+      ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml"); 
+      HelloWorld obj = (HelloWorld) context.getBean("helloWorld");    
+      obj.getMessage();    
+
+10. Difference Between BeanFactory and ApplicationContext in Spring 
+- where memory consumption might be critical. In those scenarios, it would be justifiable to use the more lightweight BeanFactory. However, in most enterprise applications, the ApplicationContext is what you will want to use.
+
+
+11. Spring boot common annotations 
+- @SpringBootApplication - @Configuration, @ComponentScan , @EnableAutoConfiguration 
+- @RestController, @Controller, @Service @Repository, @Component  
+
+12. Explain @SpringBootApplication
+- @Configuration
+	- Tags the class as a source of bean definitions for the application context.
+- @ComponentScan 
+	- Tells Spring to look for other components, configurations, controllers and services in the com/example package.
+- @EnableAutoConfiguration 
+	-Tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings. 
+	- Example - If spring-webmvc is on the classpath, this annotation flags the application as a web application and activates key behaviors, such as setting up a DispatcherServlet.
+	
+	
+13. What is REST & Content negotiation ? 
+- REST stands for REpresentational State Transfer.
+- There is no restriction on what can be a resource. A todo is a resource. A person on facebook is a resource.
+- A resource can have multiple representation - XML, HTML, JSON 
+- When a resource is requested, we provide the representation of the resource.
+
+14. What is SOAP ?
+
+15. SOAP vs REST ?
+	
+16. @RestController vs @Controller
+- The @RestController annotation in Spring MVC is nothing but a combination of @Controller and @ResponseBody annotation.
+- It was added into Spring 4.0 to make the development of RESTful Web Services in Spring framework easier. 
+- In short, the following two code snippet are equal in Spring MVC:
+@Controller
+@ResponseBody
+public class MVCController { 
+   .. your logic
+}
+
+@RestController
+public class RestFulController { 
+  .... your logic
+}
+
+17. What does @RequestBody & @ResponseBody do ? 
+- @RequestBody -  @RequestBody annotation maps the HttpRequest body to a transfer or domain object, enabling automatic deserialization of the inbound HttpRequest body onto a Java object.
+- @ResponseBody annotation tells a controller that the object returned is automatically serialized into JSON and passed back into the HttpResponse object.
+
+18. HttpRequest & HttpResponse ?
+
+19. Content type  OR content negotiation 
+- Content Negotiation helps the Consumer and Provider interact about the data exchange format.
+
+
+
+7. Explain @Controller with example 
+
+
+
+7. 
+
+4. Advantages of Spring boot ?
 - Stand-alone app 
 - Auto configuration
 - Embedded tomcat
@@ -13,16 +135,10 @@
 	- Used to auto resolve dependencies 
 	- Transitively Dependency Resolution Management. A -> B,B -> C, A -> C
 	- Example - spring-boot-starter-web. Which includes Spring mvc, REST, tomcat, Jakson, Validation - Hibernate Validator, Validation API, loggers etc on classpath
-- Auto configurations 
 - Spring initizr 
 - Integrates with Spring Ecosystem like Spring JDBC, Spring ORM, Spring Data, Spring Security easily by avoiding boilerplate code.
 - Spring CLI
 
-3. How to create Spring boot app ?
-- Spring maven project
-- Spring initializr 
-- Spring boot CLI
-- Spring boot wizard, Spring STS | Intellij Ultimate
 
 4. Spring boot annotations ?
 - @RestController
