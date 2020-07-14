@@ -1,2 +1,61 @@
 1. Dependency Injection or IOC Inversion of Control.
 
+2. What is bean ?
+- Spring beans are Java objects that are managed by the Spring container.
+
+3. What is Spring container? 
+- The Spring container is responsible for instantiating, configuring, and assembling the Spring beans.
+
+4. What is IoC container ?
+
+5. Example of Spring bean?
+
+@Setter
+@Getter
+public class HelloWorld { 
+   private String message;   
+ }  
+
+In the XML-based configuration, beans.xml supplies the metadata for the Spring container to manage the bean.
+
+Here is an example of how we configure our HelloWorld POJO for the IoC container:
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   <bean id = "helloWorld" class = "com.zoltanraffai.HelloWorld">
+      <property name = "message" value = "Hello World!"/>
+   </bean>
+</beans>
+
+
+6. What is BeanFactory 
+- Root interface for accessing the Spring container.
+- Features 
+	- Bean instantiation/wiring
+	- Usually, the implementations use lazy loading, which means that beans are only instantiating when we directly calling them through the getBean() method.
+	- The most used API that implements the BeanFactory is the XmlBeanFactory.
+	- Example 
+		      XmlBeanFactory factory = new XmlBeanFactory (new ClassPathResource("beans.xml")); 
+			  HelloWorld obj = (HelloWorld) factory.getBean("helloWorld");    
+			  obj.getMessage();    
+
+
+9. What is application context ?
+- The Application Context is Spring's advanced container.
+- It implements the BeanFactory interface. Hence, the ApplicationContext includes all functionality of the BeanFactory and much more
+- Features -  Bean instantiation/wiring, 
+- It uses eager loading, so every bean instantiate after the ApplicationContext is started up.
+- Example 
+      ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml"); 
+      HelloWorld obj = (HelloWorld) context.getBean("helloWorld");    
+      obj.getMessage();    
+
+10. Difference Between BeanFactory and ApplicationContext in Spring 
+- where memory consumption might be critical. In those scenarios, it would be justifiable to use the more lightweight BeanFactory. However, in most enterprise applications, the ApplicationContext is what you will want to use.
+
+
+
+3. Spring bean life cycle 
+4. SPEL

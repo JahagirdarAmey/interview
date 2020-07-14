@@ -17,3 +17,85 @@
 12. What is Cross-Site Request Forgery attack? 
 13. CORS 
 14. Spring SOAP
+
+What is REST & Content negotiation ? 
+- REST stands for REpresentational State Transfer.
+- There is no restriction on what can be a resource. A todo is a resource. A person on facebook is a resource.
+- A resource can have multiple representation - XML, HTML, JSON 
+- When a resource is requested, we provide the representation of the resource.
+- When a consumer sends a request, it can specify two HTTP Headers related to Content Negotiation
+    Accept - expected content type of the response. application/xml OR application/json - 
+    Content-Type - content type of the body of the request.  application/xml OR application/json - 
+- This dialog which happens between the Consumer and Service Provider is called Content Negotiation.	
+
+
+What is SOAP ?
+- Simple Object Access Protocol
+- In SOAP, the request and response are in XML format. 
+- SOAP defines a standard XML format. We will use WSDL (Web Service Definition Language) to define the format of request xml and the response xml.
+- Lets say Facebook wants to know how to call the TODO Service? What should I give to the Facebook developer? I will give him a WSDL of the Todo service. It will explain:
+	- different services (operations) exposed by the server
+	- How can a service (operation) be called? What url to use? (also called End Point).
+	- What should the structure of request xml?
+	- What should be the structure of response xml?
+- SOAP format defines a SOAP-Envelope which envelopes the entire document.
+    - SOAP-Header (optional) contains any information needed to identify the request. Also, part of the Header is authentication, authorization information (signatures, encrypted information etc).
+    - SOAP-Body contains the real xml content of request or response.
+    - In case of error response, server responds back with SOAP-Fault.
+
+
+5. Explain @SpringBootApplication
+- @Configuration
+	- Tags the class as a source of bean definitions for the application context.
+- @ComponentScan 
+	- Tells Spring to look for other components, configurations, controllers and services in the com/example package.
+	- Spring is a dependency injection framework. It is all about beans and wiring in dependencies.
+	- This part of “telling Spring where to search” is called a Component Scan.
+- @EnableAutoConfiguration 
+	-Tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings. 
+	- Example - If spring-webmvc is on the classpath, this annotation flags the application as a web application and activates key behaviors, such as setting up a DispatcherServlet.
+
+
+15. SOAP vs REST ?
+-  REST is an architectural style. SOAP is a message exchange format.
+- Popular implementations of REST and SOAP styles.
+    RESTful Sample Implementation : JSON over HTTP
+    SOAP Sample Implementation : XML over SOAP over HTTP
+-   REST is built over simple HTTP protocol. SOAP services are more complex to implement and more complex to consume.
+-   REST has better performance and scalability. REST reads can be cached, SOAP based reads cannot be cached.
+    REST permits many different data formats (JSON is the most popular choice) where as SOAP only permits XML.
+    SOAP services have well defined structure and interface (WSDL) and has a set of well defined standards (WS-Security, WS-AtomicTransaction and WS-ReliableMessaging). Documentation standards with REST are evolving
+
+	
+16. @RestController vs @Controller
+- The @RestController annotation in Spring MVC is nothing but a combination of @Controller and @ResponseBody annotation.
+- It was added into Spring 4.0 to make the development of RESTful Web Services in Spring framework easier. 
+- In short, the following two code snippet are equal in Spring MVC:
+@Controller
+@ResponseBody
+public class MVCController { 
+   .. your logic
+}
+
+@RestController
+public class RestFulController { 
+  .... your logic
+}
+
+17. What does @RequestBody & @ResponseBody do ? 
+- @RequestBody -  @RequestBody annotation maps the HttpRequest body to a transfer or domain object, enabling automatic deserialization of the inbound HttpRequest body onto a Java object.
+- @ResponseBody annotation tells a controller that the object returned is automatically serialized into JSON and passed back into the HttpResponse object.
+
+18. HttpRequest & HttpResponse ?
+- HTTP Request is a packet of information that one computer sends to another computer to communicate something. To its core, HTTP Request is a packet of binary data sent by the Client to server.
+
+
+19. Explain @Controller vs @RestController 
+- @Controller 
+	- is used to mark classes as Spring MVC Controller.
+	- If you use @Controller you can return a view in Spring web MVC.
+- @RestController 
+	- is a convenience annotation that does nothing more than adding the @Controller and @ResponseBody annotations 
+	- If you use @RestController you cannot return a view (By using Viewresolver in Spring/springboot) and yes @ResponseBody is not needed in this case.
+
+
