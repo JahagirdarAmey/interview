@@ -1,13 +1,13 @@
 ### Spring
 
-| Topic        			 | Question List Ready       |
-| -------------------------- |:------------------------------------:| 
-| Spring Boot          | - [x]								|
-| Spring MVC          | - [ ]								|
-| Spring data JPA   | - [ ] 								|
-| Spring Security     | - [ ] 								|
-| Spring Basics       | - [ ] 								|
-| Spring AOP          | - [ ] 								|
+
+
+- [x]	Spring Boot        	
+- [ ]	Spring MVC        	
+- [ ] 	Spring data JPA  	
+- [ ] 	Spring Security   	
+- [ ] 	Spring Basics     	
+- [ ] 	Spring AOP        	
 
 
 
