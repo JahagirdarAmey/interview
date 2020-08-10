@@ -99,3 +99,7 @@ public class RestFulController {
 	- If you use @RestController you cannot return a view (By using Viewresolver in Spring/springboot) and yes @ResponseBody is not needed in this case.
 
 
+Dispatcher Servlet 
+View resolver 
+
+

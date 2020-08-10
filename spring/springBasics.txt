@@ -1,14 +1,46 @@
-1. Dependency Injection or IOC Inversion of Control.
+1. What is Spring & its features 
+- Open source Java framework which helps programmer for development 
+- It provids IOC container 
+- Based on principle of Dependecy injection - loosely coupled applications 
+- Provides  Aspect Oriented Programming 
 
-2. What is bean ?
+
+Lose coupling. 
+
+Tight coupling - 
+class complexAlgorithm{
+	BubbleSortAlgorith algo = new BubbleSortAlgorith()
+}
+- What is tomorrow sorting algo is to change ? Need code change 
+
+
+Loose coupling - 
+class complexAlgorithm{
+	SortingAlgo algo; 
+	complexAlgorithm(SortingAlgo algo){}
+}
+
+interface sortAlogith{ }
+
+BubbleSortAlgorithm implements SortingAlgo {}
+QuickSortAlgorithm implements SortingAlgo {}
+
+
+
+2. Dependency Injection & its type .
+- Types 
+	- Constructor based
+	- Setter based 
+
+3. What is bean ?
 - Spring beans are Java objects that are managed by the Spring container.
 
-3. What is Spring container? 
+What is Spring container? 
 - The Spring container is responsible for instantiating, configuring, and assembling the Spring beans.
 
-4. What is IoC container ?
+What is Ioc & What is IoC container ?
 
-5. Example of Spring bean?
+Example of Spring bean?
 
 @Setter
 @Getter
@@ -30,7 +62,7 @@ Here is an example of how we configure our HelloWorld POJO for the IoC container
 </beans>
 
 
-6. What is BeanFactory 
+What is BeanFactory 
 - Root interface for accessing the Spring container.
 - Features 
 	- Bean instantiation/wiring
@@ -42,7 +74,7 @@ Here is an example of how we configure our HelloWorld POJO for the IoC container
 			  obj.getMessage();    
 
 
-9. What is application context ?
+What is application context ?
 - The Application Context is Spring's advanced container.
 - It implements the BeanFactory interface. Hence, the ApplicationContext includes all functionality of the BeanFactory and much more
 - Features -  Bean instantiation/wiring, 
@@ -52,10 +84,18 @@ Here is an example of how we configure our HelloWorld POJO for the IoC container
       HelloWorld obj = (HelloWorld) context.getBean("helloWorld");    
       obj.getMessage();    
 
-10. Difference Between BeanFactory and ApplicationContext in Spring 
+Difference Between BeanFactory and ApplicationContext in Spring 
 - where memory consumption might be critical. In those scenarios, it would be justifiable to use the more lightweight BeanFactory. However, in most enterprise applications, the ApplicationContext is what you will want to use.
 
 
 
-3. Spring bean life cycle 
-4. SPEL
+Spring bean life cycle.  Differentiate between singleton and prototype bean?
+SPEL
+Advices in Spring
+Default scope of a bean 
+types of transaction management that are supported by Spring?
+ Is Singleton beans are thread safe in Spring Framework? Why ?
+ What are the benefits of Spring Framework?
+ Define Bean Wiring?
+ Write about AOP module?
+ 

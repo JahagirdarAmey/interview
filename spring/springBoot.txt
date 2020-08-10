@@ -199,8 +199,16 @@ server:
 - DBProperties Autowire to use. 
 
 29. Autowire 
+- enables you to inject the object dependency implicitly
+- Autowiring can't be used to inject primitive and string values. 
+- Autowires on feilds , Autowires on constructors 
 
 30. Constructor autowire vs feild autowire, Which is better 
+Constructor injection is actually recommended over field injection, and has several advantages:
+- The dependencies are clearly identified. There is no way to forget one when testing, or instantiating the object in any other circumstance (like creating the bean instance explicitly in a config class)
+- The dependencies can be final, which helps with robustness and thread-safety
+- You don't need reflection to set the dependencies. InjectMocks is still usable, but not necessary. You can just create mocks by yourself and inject them by simply calling the constructor
+
 
 31. yaml files in spring boot. & SnakeYaml 
 - The SpringApplication class supports the YAML file as an alternative to properties whenever you use the SnakeYAML library on your classpath. The different ways to load a YAML file in Spring Boot is as follows:
@@ -337,3 +345,5 @@ Think about what you would need to be able to deploy your application (typically
 58. In which layer, should the boundary of a transaction start?
 
 We recommend managing transactions in the Service layer. Logic for business transactions is in the business/service layer and you would want to enforce transaction management at that level.
+
+59. @Qualifier
