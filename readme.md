@@ -1,7 +1,5 @@
 ### Spring
 
-
-
 - [x]	Spring Boot        	
 - [ ]	Spring MVC        	
 - [ ] 	Spring data JPA  	
@@ -16,7 +14,7 @@
 - [ ] OOPS 
 - [ ] Java basics - general 
 - [ ] Collections 
-- [ ] Exception handling 
+- [x] Exception handling 
 - [ ] GC
 - [ ] Java 8 
 - [ ] Threading
