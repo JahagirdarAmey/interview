@@ -1,21 +1,21 @@
-### Spring
+### Spring Ecosystem
 
 - [x]	Spring Boot        	
 - [ ]	Spring MVC        	
-- [ ] 	Spring data JPA  	
-- [ ] 	Spring Security   	
-- [ ] 	Spring Basics     	
-- [ ] 	Spring AOP        	
-
-
+- [ ] Spring Data JPA  
+- [ ] Spring Data Mongo  
+- [ ] Spring Security   	
+- [ ] Spring Basics     	
+- [ ] Spring AOP        	
+- [ ] Spring JMS
 
 ### Core Java 
 
-- [ ] OOPS 
+- [ ] OOPS Concepts 
 - [ ] Java basics - general 
 - [ ] Collections 
 - [x] Exception handling 
-- [ ] GC
+- [ ] Garbage Collection
 - [ ] Java 8 
 - [ ] Threading
 - [ ] JVM Architecture 
@@ -25,14 +25,39 @@
 
 ### Cloud CICD
 
-
 ### Databases 
 - [ ] RDBMS Basics 
 - [ ] NoSQL Basics 
 
-### Design 
+### Data Structure 
+- [ ] Stack
+- [ ] Queue
+- [ ] LinkedList
+- [ ] Graph
+- [ ] Queue
+- [ ] Searching
+- [ ] Sorting
 
-- [ ] OOPS design patterns 
-- [ ] Design philosophies 
+### DevOps 
+- [ ] PCF
+- [ ] Jenkins
+- [ ] AWS
+- [ ] K8s
+- [ ] Docker
+
+
+### Design Philisophies  
+
+- [ ] Design Philosophies 
 - [ ] OOPS design patterns used in java 
 - [ ] System design primer
+- [ ] Singleton
+- [ ] Factory / Abstract Factory
+- [ ] Decorator
+- [ ] Proxy
+- [ ] Facade
+- [ ] Adapter
+- [ ] Observer
+
+### Other
+- [ ] Apache Camel
