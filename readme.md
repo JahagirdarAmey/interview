@@ -1,7 +1,7 @@
 ### Spring Ecosystem
 
-- [x]	Spring Boot        	
-- [ ]	Spring MVC        	
+- [x] Spring Boot        	        	
+- [ ] Spring MVC        	
 - [ ] Spring Data JPA  
 - [ ] Spring Data Mongo  
 - [ ] Spring Security   	
@@ -46,10 +46,20 @@
 - [ ] Docker
 
 
-### Design Philisophies  
+### Design Philosophies  
 
 - [ ] Design Philosophies 
-- [ ] OOPS design patterns used in java 
+    - [x] 12-Factor App 
+    - [x] SOLID
+    - [x] YAGNI 
+    - [x] KISS 
+    - [x] DRY 
+    - [x] Conway’s law 
+    - [ ] Domain Driven Design 
+    - [ ] Event Driven Design 
+    - [ ] Patterns used in your project
+
+### Design Patterns
 - [ ] System design primer
 - [ ] Singleton
 - [ ] Factory / Abstract Factory

@@ -1,0 +1,14 @@
+1. Builder
+    - StringBuilder
+
+2. Singleton
+    - java.lang.Runtime#getRuntime()
+
+3. Adapter
+    - java.util.Arrays#asList()
+
+4. Command
+    - java.lang.Runnable
+
+5. Observer (or Publish/Subscribe)
+    - java.util.Observer/java.util.Observable (rarely used in real world though)

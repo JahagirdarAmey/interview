@@ -1,0 +1,35 @@
+JVM Architecture , we’ll break it into 3 parts(subsystems):
+
+    ClassLoaders Subsystem
+    Runtime Data Area
+    Execution Engine
+
+
+JVM needs some input to process it, and that input is a .class file.
+
+1. ClassLoaders Subsystem
+
+In Short; whenever we try to load a class, our System ClassLoader⇒ delegates it to the Extension ClassLoader⇒, which in turns delegates it to Bootstrap ClassLoader, which ultimately finds the class and loads it into the JVM.
+
+Loading:
+
+    Bootstrap ClassLoader:
+        The bootstrap class loader loads the core Java libraries located in the /jre/lib directory specifically loads rt.jar
+        This ClassLoader is written in a native language which is C/C++.
+        Bootstrap is the parent ClassLoader and Extension ClassLoader falls under it.
+    Extension ClassLoader:
+        It loads classes from the JDK Extension located in the, /jre/lib/ext
+        Extension ClassLoader is implemented by the sun.misc.Launcher$ExtClassLoader class.
+        System ClassLoader is the child of this ClassLoader. 
+    System ClassLoader:
+        This loader is responsible for loading the classes found on java classpath.
+        It is implemented by the sun.misc.Launcher$AppClassLoader class.
+        Setting the classpath through an environment variable.
+
+1.2 Linking:
+
+Linking a class or interface involves ‘verifying’ and ‘preparing’ that class or interface, its direct superclass, its direct super interfaces, and its element type (if it is an array type), if necessary. ‘Resolution’ of symbolic references in the class or interface is an optional part of linking.
+
+    Verification: Ensures that the binary representation of class/Interface is structurally correct. If an attempt by JVM to verify class/Interface fails then an instance of LinkageError or its subclass is thrown.
+    Preparation: It involves creating the static fields for a class or an Interface and initializing such fields with their default values.
+    Resolution: It is the process of locating classes, interfaces, fields, and methods referenced symbolically from a type’s constant pool, and replacing those symbolic references with direct references.

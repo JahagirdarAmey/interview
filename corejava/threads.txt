@@ -69,3 +69,31 @@ Sleep
 	- Wake up condition - until at least time expire or call interrupt().
 	- Used for multi-thread-synchronization
 	- keep lock for at least t times if timeout specified or somebody interrupt.
+
+12. ThreadLocal
+Use Case 1
+- Suppose there is a task (get birthdate from DB & return in string format)
+- For threads - 1/2/3/4/5, It is fine, But what if 1000 thread needs to run ? - ThreadPool of 10 T
+- But it will create 1000 SimpleDateFormat object , Global SimpleDateFormat object.
+- But SimpleDateFormat is not threadsafe - So it will have data integrity issue.
+- A solution - can be lock - synchronisation - but it will slow down the performance
+- A Mid way solution - Each T will have its own dateformat object, i.e variables specific to threads - ThreadLocal
+- No synchronicastion issue, no data integrity issue.  (~ 10 simpleDatFormat object)
+- Memory efficieny + Thread safety
+- ThreadLocal<SimpleDateFormat>
+
+13. Java Interrupts
+- T1 (can be a main thread).  T1 starts T2. T2 is long running thread (Task thread)
+- But after sometime you don't want long running thread to be completed
+- But there is no cancel method in Thread
+- T1 can call inturrupt() on T2. T2 may or may not stop. Its cooperative mechanism . Thread can not force another thread to stop
+- Thread T2 has a chance to cleanup (data integrity / open DB connections)
+- InterruptedException -
+    - Runnable can not throw checked exceptions
+    - InterruptedException is checked exception
+    - Instead of Runnable, implement Callable
+    - Throwing this EX is mechanism to know T1 that T2 is stopping
+    - Example - wait, sleep, join
+    - isInturrepted()
+
+14. Semaphore
