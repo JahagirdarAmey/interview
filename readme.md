@@ -1,3 +1,17 @@
+### Core Java 
+
+- [x] OOPS Concepts 
+- [ ] Java basics
+- [ ] Collections 
+- [ ] Generics
+- [ ] Java 8 
+- [ ] Equals and Hashcode
+- [x] Exception handling 
+- [ ] Garbage Collection
+- [ ] Threading
+- [ ] JVM Architecture 
+- [x] Serialization  
+
 ### Spring Ecosystem
 
 - [x] Spring Boot        	        	
@@ -9,42 +23,20 @@
 - [ ] Spring AOP        	
 - [ ] Spring JMS
 
-### Core Java 
-
-- [ ] OOPS Concepts 
-- [ ] Java basics - general 
-- [ ] Collections 
-- [x] Exception handling 
-- [ ] Garbage Collection
-- [ ] Java 8 
-- [ ] Threading
-- [ ] JVM Architecture 
-- [x] Serialization  
-
 ### Microservices 
-
-### Cloud CICD
 
 ### Databases 
 - [ ] RDBMS Basics 
 - [ ] NoSQL Basics 
 
 ### Data Structure 
-- [ ] Stack
+- [x] Stack
 - [ ] Queue
 - [ ] LinkedList
 - [ ] Graph
 - [ ] Queue
 - [ ] Searching
 - [ ] Sorting
-
-### DevOps 
-- [ ] PCF
-- [ ] Jenkins
-- [ ] AWS
-- [ ] K8s
-- [ ] Docker
-
 
 ### Design Philosophies  
 
@@ -58,10 +50,10 @@
     - [ ] Domain Driven Design 
     - [ ] Event Driven Design 
     - [ ] Patterns used in your project
+- [ ] System design primer
 
 ### Design Patterns
-- [ ] System design primer
-- [ ] Singleton
+- [x] Singleton
 - [ ] Factory / Abstract Factory
 - [ ] Decorator
 - [ ] Proxy
@@ -71,3 +63,10 @@
 
 ### Other
 - [ ] Apache Camel
+
+### DevOps 
+- [ ] PCF
+- [ ] Jenkins
+- [ ] AWS
+- [ ] K8s
+- [ ] Docker
