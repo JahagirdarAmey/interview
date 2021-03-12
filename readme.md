@@ -2,7 +2,7 @@
 
 - [x] OOPS Concepts 
 - [ ] Java basics
-- [ ] Collections 
+- [x] Collections 
 - [ ] Generics
 - [ ] Java 8 
 - [ ] Equals and Hashcode
@@ -64,9 +64,10 @@
 ### Other
 - [ ] Apache Camel
 
-### DevOps 
+### DevOps & Praceises 
 - [ ] PCF
 - [ ] Jenkins
 - [ ] AWS
 - [ ] K8s
 - [ ] Docker
+- [ ] Canary Deployement 

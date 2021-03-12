@@ -1,9 +1,8 @@
-1. What is exception in java?
-
-2. Exception hierarchy
-
-Object -> Throwable (compiletime) -> Error (IO Error, Stack Overflow error) - (All runtime), Exception (Runtime -> Nullpointer, Arthematic & IOException, SQLException(compiletime)) 
-NOTE - Runtime - Unchecked, Compiletime- checked 
+**1. What is exception in java?**
+- An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. 
+  
+**2. Exception hierarchy**
+![alt text](../resources/core_java/exceptions/exceptions.png "Title")
 
 3. Difference between checked & unchecked exception 
 - Runtime - Unchecked, Compiletime- checked 
