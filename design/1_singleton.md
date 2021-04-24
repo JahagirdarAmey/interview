@@ -2,12 +2,12 @@
 # Singleton
 
 ## What ?
-    - ensure class has only one instance
+    - Creational design pattern, 
 ## Why ?
     - provide global access to that instance
 ## Usage ?
     - Logging class
-    - Managing connection to DB
+    - Managing connection to DB (Only 1 connection to DB becuase of driver limitation or licencing issue)
     - File manager
     - thread pools, configuration settings, device driver objects.
 ## How to create ?

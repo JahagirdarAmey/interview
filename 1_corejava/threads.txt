@@ -97,3 +97,8 @@ Use Case 1
     - isInturrepted()
 
 14. Semaphore
+
+15. What is synchronization
+- Consurrant executation of different processes
+`\
+`   `w`

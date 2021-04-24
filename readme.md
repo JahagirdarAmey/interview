@@ -34,7 +34,6 @@
 - [ ] Queue
 - [ ] LinkedList
 - [ ] Graph
-- [ ] Queue
 - [ ] Searching
 - [ ] Sorting
 
@@ -50,7 +49,12 @@
     - [ ] Domain Driven Design 
     - [ ] Event Driven Design 
     - [ ] Patterns used in your project
+    - [ ] Richardson Maturity Model
+    - [ ] CI CD Principles
 - [ ] System design primer
+    - [ ] CAP Theorem
+    - [ ] How to design scalable system
+    - [ ] How to deal with production level outage 
 
 ### Design Patterns
 - [x] Singleton

@@ -100,27 +100,31 @@
 - Abstract classes can implement interfaces without even providing the implementation of interface methods.
 - An abstract class may contain non-final variables.
 - An abstract class also cannot be instantiated but can be invoked if it contains the main method.
+- Abstratc class may not contain abstract methods 
 
 **15. What are pass by reference and pass by value?**
 - Pass by value 
 	- When an object is passed by value, this means that a copy of the object is passed.
-	public class ComputingEngine 
-	{ 
-	    public static void main(String[] args) 
-	    { 
-        	int x = 15;
-        	ComputingEngine engine = new ComputingEngine();
-        	engine.modify(x); 
-        	System.out.println("The value of x after passing by value "+x); 
-    	    } 
-   	    public  void modify(int x) 
-  	   { 
-        	x = 12; 
-    	   } 
+```java
+public class ComputingEngine
+{
+	public static void main(String[] args)
+	{
+		int x = 15;
+		ComputingEngine engine = new ComputingEngine();
+		engine.modify(x);
+		System.out.println("The value of x after passing by value "+x);
 	}
+	public  void modify(int x)
+	{
+		x = 12;
+	}
+}
+```
 - Pass by reference
 	- When an object is passed by reference, this means that the actual object is not passed, rather a reference of the object is passed.
 	- Thus, any changes made by the external method, are also reflected in all places.
+```java
 	public class ComputingEngine 
 	{ 
 	    public static void main(String[] args) 
@@ -149,6 +153,8 @@
 		Computation()      { x = 1; } 
 	}
 
+
+```
 
 16. Local variables vs instance variables 
 - Local variabls 
@@ -281,4 +287,42 @@ class Student{
 - Reflection is used to load java classes at runtime. 
 - Frameworks like struts, spring and hibernate uses reflection for loading classes at runtime.
 
-**Inner classes**
+**Inner classes vs sub classes**
+Inner Class 
+- Class within another class, Nested class
+- An inner class has access rights for the class which is nesting it. Means it can access varaibles and methods of outerclass  
+Subclass
+- Child class of another class 
+- Can access public and protected methods 
+
+
+**Instance variable vs local veriable**
+Instance variable - Class level variable
+Local variable - method level variable 
+
+**Char array vs String for storing sensetive information**
+Char array is preffered as String is immutable and any modification in string produces new string, String values will be kept in spring pool (heap) until GC happens, So If someone got memory dump access, It can cause security isssues
+
+**Continue or Break**
+Continue 
+- Currant iteration is broken 
+Break
+- Loop is broken 
+
+**Default in switch**
+- Optional 
+- Always written at last
+
+
+**Main method in java**
+- Can not return anything deu to signature resiction 
+- Can not be private as JVM will not be able to invoke it. Runtime error
+
+**Interface vs abstract performance implecations**
+- Interfaces are slow than abstact 
+- interface needs extra indiracions 
+- Only 1 class can be extended but many interfaces can implement causes an compulson to implement each and every interface method 
+
+**Importing Package can also import sub-pacges ?**
+No
+

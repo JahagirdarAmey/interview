@@ -1,8 +1,29 @@
 **1. basic interfaces of Java Collections Framework?**
 ![alt text](../resources/core_java/collections/collection_framework_hierarchy_in_java.jpg "Title")
+**Comman Methods in Collection basic interfaces**
+- Iterable interface - Iterator<T> iterator()
+- Collection Interface - 
+```java
+boolean add(E e)
+boolean	addAll(Collection<? extends E> c)
+void	clear()
+boolean	contains(Object o)
+boolean	containsAll(Collection<?> c)
+boolean	equals(Object o)
+int	hashCode()
+boolean	isEmpty()
+Iterator<E>	iterator()
+boolean	remove(Object o)
+boolean	removeAll(Collection<?> c)
+boolean	retainAll(Collection<?> c)
+int	size()
+Object[]	toArray()
+<T> T[]	toArray(T[] a)
+```
 
 **2. Why Collection does not extend Cloneable and Serializable interfaces?**
 - cloning or serialization come into play when dealing with actual implementations. Thus, the concrete implementations of collections should decide how they can be cloned or serialized.
+- ArrayList implements Cloneable , Serializable
 
 **3. What is an Iterator?**
 - The Iterator interface provides a number of methods that are able to iterate over any Collection. 

@@ -88,6 +88,7 @@ Dependency Inversion
 - Event driven ?
 - Domain design 
 
+### Richardson Maturity Model / REST Maturity Model
 
 
 
